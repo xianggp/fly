@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.phonegap.plugins.barcodescanner"
-    version="1.1.0">
+    id="cn.com.easier.DeviceInfo"
+    version="1.0.2">
 
     <name>DeviceInfo</name>
     <description>DeviceInfo</description>
+    <keywords>DeviceInfo</keywords>
     <license>MIT</license>
 
     <engines>
@@ -12,7 +14,7 @@
     </engines>    
 
     <js-module src="www/DeviceInfo.js" name="DeviceInfo">
-        <clobbers target="cordova.plugins.DeviceInfo" />
+        <clobbers target="DeviceInfo" />
     </js-module>
 
     <asset src="www/DeviceInfo.js" target="DeviceInfo.js" />
@@ -21,19 +23,15 @@
 
         <source-file src="src/cn/com/easier/DeviceInfo.java" target-dir="src/cn/com/easier" />
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="DeviceInfo">
-                <param name="android-package" value="cn.com.easiser.DeviceInfo" />
+            <feature name="ChildBrowser">
+                <param name="android-package" value="ChildBrowserCommand" />
             </feature>
         </config-file>
-      
-
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.CAMERA" />
             <uses-permission android:name="android.permission.FLASHLIGHT" />
             <!-- Not required to allow users to work around this -->
             <uses-feature android:name="android.hardware.camera" android:required="false" />
         </config-file>
-        
-        
     </platform>
 </plugin>
